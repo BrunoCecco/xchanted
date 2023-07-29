@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary: #473be8;
+	--secondary: #5454c5;
+	--tertiary: #ffffff;
+	--bkg-1: #ffffff;
+	--bkg-2: #ffffff;
+	--bkg-3: #473be8;
+	--txt-1: #ffffff;
+	--txt-2: #353945;
+	--txt-3: #353945;
+	--txt-4: #808080;
+}
+
+:root.dark {
+	--bkg-1: #353945;
+	--bkg-2: #473be8;
+	--bkg-3: #ffffff;
+	--txt-1: #473be8;
+	--txt-2: #ffffff;
+	--txt-3: #000000;
+	--txt-4: #f4f5f6;
+}
+
+a {
+	color: var(--text);
+}
+
+html {
+	overflow-x: hidden;
+}
+
+.sortable-list {
+	z-index: 100;
+}
+
+/* Styling an indeterminate progress bar */
+
+progress:not(value) {
+	/* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
+}
+
+/* Styling the determinate progress element */
+
+progress[value] {
+	/* Get rid of the default appearance */
+	appearance: none;
+
+	/* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+	border: none;
+
+	/* Add dimensions */
+	width: 100%;
+	height: 20px;
+
+	/* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+	background-color: whiteSmoke;
+	border-radius: 50%;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
+
+	/* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+	color: #473be8;
+
+	position: relative;
+}
+
+/*
+  Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
+  -webkit-progress-bar -> To style the progress element container
+  -webkit-progress-value -> To style the progress element value.
+  */
+
+progress[value]::-webkit-progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+progress[value]::-webkit-progress-value {
+	position: relative;
+
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius: 3px;
+
+	/* Let's animate this */
+	animation: animate-stripes 5s linear infinite;
+}
+
+@keyframes animate-stripes {
+	100% {
+		background-position: -100px 0;
+	}
+}
+
+/* Let's spice up things little bit by using pseudo elements. */
+
+progress[value]::-webkit-progress-value:after {
+	/* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
+	content: "";
+	position: absolute;
+
+	width: 5px;
+	height: 5px;
+	top: 7px;
+	right: 7px;
+
+	background-color: white;
+	border-radius: 100%;
+}
+
+/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+
+progress[value]::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image: -moz-linear-gradient(
+			135deg,
+			transparent,
+			transparent 33%,
+			rgba(0, 0, 0, 0.1) 33%,
+			rgba(0, 0, 0, 0.1) 66%,
+			transparent 66%
+		),
+		-moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+		-moz-linear-gradient(left, #09c, #f44);
+
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius: 3px;
+
+	/* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+}
+
+.updates-progress::-webkit-progress-value {
+	/* Gradient background with Stripes */
+	background-image: -webkit-linear-gradient(
+			135deg,
+			transparent,
+			transparent 33%,
+			rgba(0, 0, 0, 0.1) 33%,
+			rgba(0, 0, 0, 0.1) 66%,
+			transparent 66%
+		),
+		-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+		-webkit-linear-gradient(left, #09c, #f44);
+}
+
+.Dropdown-option {
+	min-width: 100% !important;
+}
+
+#appreciate-image {
+	fill: #fff;
+	filter: drop-shadow(-1px -1px 0px #3e68ff) drop-shadow(2px -1px 0px #3e68ff)
+		drop-shadow(2px 2px 0px #3e68ff) drop-shadow(-1px 2px 0px #3e68ff);
+}
+
+/* .appreciate-image:hover {
+	filter: "invert(35%) sepia(78%) saturate(6600%) hue-rotate(240deg) brightness(89%) contrast(106%)";
+} */
+
+.react-grid-item.react-grid-placeholder {
+	background-color: black !important;
+	color: black !important;
+	border-radius: 20px;
+}
+
+.react-resizable-handle.react-resizable-handle-se {
+	position: absolute;
+	border: 1.5px solid transparent !important; /* the 'strokes' of the arc */
+	display: inline-block !important;
+	min-width: 2em !important; /* the width of the innermost element */
+	min-height: 2em !important; /* the height of the innermost element */
+	padding: 0.5em !important; /* the spacing between each arc */
+	border-radius: 50% !important; /* for making the elements 'round' */
+	border-right-color: black !important;
+	transform: rotate(45deg) !important;
+	right: 0.2em !important;
+	bottom: 0.2em !important;
+}
+
+.react-resizable-handle.react-resizable-handle-se::after {
+	position: absolute;
+	border: 1.5px solid transparent !important; /* the 'strokes' of the arc */
+	display: inline-block !important;
+	min-width: 1.5em !important; /* the width of the innermost element */
+	min-height: 1.5em !important; /* the height of the innermost element */
+	padding: 0.5em !important; /* the spacing between each arc */
+	border-radius: 50% !important; /* for making the elements 'round' */
+	border-right-color: black !important;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+	display: none;
+}
+
+.react-resizable-handle {
+	background-image: none !important;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	100% {
+		opacity: 1;
+		display: flex;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes fadeLeft {
+	0% {
+		transform: translateX(300px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes fadeRight {
+	0% {
+		transform: translateX(-300px);
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.animate-fadeIn {
+	animation: fadeIn 0.5s ease-in;
+}
+.animate-fadeRight {
+	animation: fadeRight 0.7s ease-out;
+}
+.animate-fadeLeft {
+	animation: fadeLeft 0.7s ease-out;
+	animate-delay: 2s;
+}
+
+.coming-soon {
+	cursor: url("/eyes.png"), url("../public/eyes.png"), url("/cursor/eyes.png"),
+		default;
+}
+
+body::-webkit-scrollbar {
+	display: none !important;
+}
+
+*::-webkit-scrollbar {
+	width: 10px; /* width of the entire scrollbar */
+	/* display: none; */
+}
+
+*::-webkit-scrollbar-track {
+	border-radius: 20px;
+	background: white; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: lightgrey; /* color of the scroll thumb */
+	border-radius: 20px; /* roundness of the scroll thumb */
+	border: 3px solid white; /* creates padding around scroll thumb */
+}

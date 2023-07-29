@@ -1,0 +1,67 @@
+.gradient {
+    background: linear-gradient(270deg, #514ba7, #9a4ca6, #d24da6, #5d86bb); /* adjust angle of gradient and color schema*/
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+    -webkit-animation: gradient 30s ease infinite;
+    -moz-animation: gradient 30s ease infinite;
+    -o-animation: gradient 30s ease infinite;
+    height: 100vh;
+}
+
+.gradientMaxHeight {
+    background: linear-gradient(270deg, #514ba7, #9a4ca6, #d24da6, #5d86bb); /* adjust angle of gradient and color schema*/
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+    -webkit-animation: gradient 30s ease infinite;
+    -moz-animation: gradient 30s ease infinite;
+    -o-animation: gradient 30s ease infinite;
+    height: 100%;
+}
+
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-moz-keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-o-keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

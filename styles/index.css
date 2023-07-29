@@ -1,0 +1,37 @@
+.tab-disabled {
+    cursor: "url('../public/eyes.png'), pointer";
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
+}
+
+.social-links {
+	display: flex !important;
+	gap: 15px
+}
+.social-link {	
+	width: 50px;
+	cursor: pointer;	
+}
+.social-link:hover {
+	transform: scale(105%)
+}

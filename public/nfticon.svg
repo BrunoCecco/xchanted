@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="298px" height="313px" viewBox="0 0 298 313" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 16</title>
+    <g id="PLAN-TOTAL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-16">
+            <rect id="Rectangle" stroke="#473BE8" stroke-width="12" fill="#473BE8" x="6" y="6" width="286" height="301" rx="31"></rect>
+            <rect id="Rectangle" stroke="#473BE8" stroke-width="20" fill="#FFFFFF" x="10" y="10" width="278" height="256" rx="31"></rect>
+            <g id="NFT" transform="translate(95.720000, 116.880000)" fill="#473BE8" fill-rule="nonzero">
+                <polygon id="Path" points="37.68 42.12 27.42 42.12 10.26 16.14 10.26 42.12 0 42.12 0 0 10.26 0 27.42 26.1 27.42 0 37.68 0"></polygon>
+                <polygon id="Path" points="72.54 0 72.54 8.22 55.38 8.22 55.38 17.1 68.22 17.1 68.22 25.08 55.38 25.08 55.38 42.12 45.12 42.12 45.12 0"></polygon>
+                <polygon id="Path" points="108.24 0 108.24 8.22 97.08 8.22 97.08 42.12 86.82 42.12 86.82 8.22 75.66 8.22 75.66 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

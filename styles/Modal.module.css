@@ -1,0 +1,90 @@
+.containerModal,
+.modal,
+.nftModal,
+.collectionModal,
+.addWalletModal {
+	height: 80vh;
+	border-radius: 15px;
+	z-index: 100;
+	grid-auto-flow: column;
+	position: relative;
+	overflow: hidden;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+	background: #fff;
+}
+
+.nftModal {
+	width: max-content;
+	height: max-content;
+	background: none;
+	border-radius: 0px;
+}
+
+.collectionModal {
+	width: 50vw;
+	height: 90vh;
+}
+
+.addWalletModal {
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	z-index: 1050;
+	max-width: 400px;
+	border-radius: 10px;
+	background: #10141f;
+	box-shadow: 0px 8px 20px rgb(0 0 0 / 60%);
+	font-family: "DM Sans", "Roboto", "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	flex: 1;
+}
+
+.addWalletModalTitle {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 36px;
+	margin: 0;
+	padding: 64px 48px 48px 48px;
+	text-align: center;
+	color: #fff;
+}
+
+.modal * {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.modal {
+	width: 90vw;
+}
+
+.containerModal {
+	overflow: hidden;
+	width: 60vw;
+}
+
+.modal *::-webkit-scrollbar {
+	display: none;
+}
+
+.overlay {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	z-index: 100;
+}
+
+.tabDisabled {
+	cursor: url("/eyes.png"), pointer;
+	opacity: 0.5;
+}
